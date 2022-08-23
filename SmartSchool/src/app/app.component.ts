@@ -5,6 +5,16 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
+
 export class AppComponent {
   title = 'SmartSchool';
+  menefrego = 'Wel come maguila?';
+  canClick = false;
+  message = 'buuuuuuuu';
+
+  sayMessage() {
+    if (this.message != this.menefrego) {
+      this.menefrego == this.message
+    }
+  }
 }
