@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { NovoModelModule } from './novo-model/novo-model.module';
 import { BlablaModelModule } from './blabla-model/blabla-model.module';
 import { BiruleiboModule } from './biruleibo/biruleibo.module';
+import { AlunosModule } from './alunos/alunos.module';
+import { ProfessoresModule } from './professores/professores.module';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { BiruleiboModule } from './biruleibo/biruleibo.module';
     AppRoutingModule,
     NovoModelModule,
     BlablaModelModule,
-    BiruleiboModule
+    BiruleiboModule,
+    AlunosModule,
+    ProfessoresModule
   ],
   providers: [],
   bootstrap: [AppComponent]

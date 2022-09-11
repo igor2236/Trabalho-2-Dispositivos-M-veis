@@ -8,13 +8,13 @@ import { Component } from '@angular/core';
 
 export class AppComponent {
   title = 'SmartSchool';
-  menefrego = 'Wel come maguila?';
-  canClick = false;
-  message = 'buuuuuuuu';
+  //menefrego = 'Wel come maguila?';
+  //canClick = false;
+  //message = 'buuuuuuuu';
 
-  sayMessage() {
+  /*sayMessage() {
     if (this.message != this.menefrego) {
       this.menefrego == this.message
     }
-  }
+  }*/
 }
