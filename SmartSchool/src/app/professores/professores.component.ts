@@ -13,10 +13,15 @@ export function log(target:any): void{
 @log
 export class ProfessoresComponent implements OnInit {
 
+  protected titulo: string = "Professores";
+
   protected professores = [
-  {id: 1, name: 'Prof. Leão Camargo'},
-  {id: 2 , name: 'Prof. Camargo Amarantes'},
-  {id: 3 , name: 'Prof. Rafão Grelhas'}
+  {id: 1, name: 'Carlos Carne', email: "C_CARNE@prootomail.com"},
+  {id: 2 , name: 'Alison Saldanha', email: "alissdanha@gmail.com"},
+  {id: 3 , name: 'Rafão Grelhas', email: "R_Grrl@outlook.com"},
+  {id: 4 , name: 'Joseph Cupim', email: "jopCP@outlook.com"},
+  {id: 5 , name: 'Suzano Celado', email: "SC399401@bol.com"},
+  {id: 6 , name: 'Plinio Salgado', email: "PS300145@gmail.com"}
   ];
 
   constructor() { }

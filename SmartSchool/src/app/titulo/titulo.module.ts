@@ -1,19 +1,18 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
-import { BiruleiboComponent } from './biruleibo.component';
+import { TituloComponent } from './titulo.component';
 
 
 
 @NgModule({
   declarations: [
-    BiruleiboComponent
+    TituloComponent
   ],
   imports: [
     CommonModule
   ],
-  exports:[
-    BiruleiboComponent
+  exports: [
+    TituloComponent
   ]
 })
-export class BiruleiboModule { }
+export class TituloModule { }

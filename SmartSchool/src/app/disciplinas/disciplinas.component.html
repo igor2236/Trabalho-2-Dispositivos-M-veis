@@ -1,0 +1,4 @@
+<app-titulo [titulo]='titulo'></app-titulo>
+<ul>
+    <li *ngFor="let disciplina of disciplinas, index as i" style="cursor: pointer;">{{i+1}} - {{disciplina.name}}</li>
+</ul>

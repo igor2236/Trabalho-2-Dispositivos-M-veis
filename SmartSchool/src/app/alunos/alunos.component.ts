@@ -8,13 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AlunosComponent implements OnInit {
 
-  protected titulo = "Alunos";
-
-  public teste = [
-    'a',
-    'b',
-    'c'
-  ];
+  protected titulo: string = "Alunos";
 
   protected alunos = [
     { id: 1, name: 'Rogerio' },

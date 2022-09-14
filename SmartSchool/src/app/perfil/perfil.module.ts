@@ -1,20 +1,20 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ProfessoresComponent } from './professores.component';
+import { PerfilComponent } from './perfil.component';
 import { TituloModule } from '../titulo/titulo.module';
 
 
 
 @NgModule({
   declarations: [
-    ProfessoresComponent
+    PerfilComponent
   ],
   imports: [
     CommonModule,
     TituloModule
   ],
-  exports: [
-    ProfessoresComponent
+  exports:[
+    PerfilComponent
   ]
 })
-export class ProfessoresModule { }
+export class PerfilModule { }

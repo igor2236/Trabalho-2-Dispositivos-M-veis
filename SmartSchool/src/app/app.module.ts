@@ -3,11 +3,13 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NovoModelModule } from './novo-model/novo-model.module';
-import { BlablaModelModule } from './blabla-model/blabla-model.module';
-import { BiruleiboModule } from './biruleibo/biruleibo.module';
 import { AlunosModule } from './alunos/alunos.module';
 import { ProfessoresModule } from './professores/professores.module';
+import { DisciplinasModule } from './disciplinas/disciplinas.module';
+import { PerfilModule } from './perfil/perfil.module';
+import { HomeModule } from './home/home.module';
+import { NavbarModule } from './navbar/navbar.module';
+import { TituloModule } from './titulo/titulo.module';
 
 @NgModule({
   declarations: [
@@ -16,11 +18,13 @@ import { ProfessoresModule } from './professores/professores.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NovoModelModule,
-    BlablaModelModule,
-    BiruleiboModule,
     AlunosModule,
-    ProfessoresModule
+    ProfessoresModule,
+    DisciplinasModule,
+    PerfilModule,
+    HomeModule,
+    NavbarModule,
+    TituloModule
   ],
   providers: [],
   bootstrap: [AppComponent]

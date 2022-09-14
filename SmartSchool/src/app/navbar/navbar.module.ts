@@ -1,19 +1,18 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
-import { NovoModelComponent } from './novo-model.component';
+import { NavbarComponent } from './navbar.component';
 
 
 
 @NgModule({
   declarations: [
-    NovoModelComponent 
+    NavbarComponent
   ],
   imports: [
     CommonModule
   ],
   exports: [
-    NovoModelComponent
+    NavbarComponent
   ]
 })
-export class NovoModelModule { }
+export class NavbarModule { }

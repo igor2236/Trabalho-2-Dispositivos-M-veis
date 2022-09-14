@@ -1,2 +1,6 @@
-<h1>professores works!</h1>
-<ul><li *ngFor = "let professor of professores; index as i">{{professor.id}} - {{professor.name}}</li></ul>
+<app-titulo [titulo]='titulo'></app-titulo>
+        <ul>
+            <li *ngFor="let professor of professores; index as i" style="cursor: pointer;">{{i+1}} - {{professor.name}}</li>
+        </ul>
+
+        aqui deveria ter uma tabela ngx-bootstrap
