@@ -12,6 +12,8 @@ import { NavbarModule } from './navbar/navbar.module';
 import { TituloModule } from './titulo/titulo.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
+import { NgxNavbarModule } from 'ngx-bootstrap-navbar';
+import { CollapseModule } from 'ngx-bootstrap/collapse';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,11 @@ import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
     NavbarModule,
     TituloModule,
     BsDropdownModule.forRoot(),
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    CollapseModule,
+    NgxNavbarModule
+   
+
   ],
   providers: [],
   bootstrap: [AppComponent]

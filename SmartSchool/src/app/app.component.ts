@@ -8,17 +8,6 @@ import { Component } from '@angular/core';
 
 export class AppComponent {
   title = 'SmartSchool';
-  //nao = 'Wel come maguila?';
-  //canClick = false;
-  //message = 'buuuuuuuu';
-
-  /*sayMessage() {
-    if (this.message != this.nao) {
-      this.nao == this.nao
-    }
-    ta errado
-  }*/
-
 /*
 <a routerLink="professores"> Professores </a>
 <a routerLink="disciplinas"> Disciplinas </a>

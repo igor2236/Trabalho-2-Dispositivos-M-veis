@@ -10,7 +10,7 @@ import { TituloModule } from '../titulo/titulo.module';
   ],
   imports: [
     CommonModule,
-    TituloModule
+    TituloModule,
   ],
   exports: [
     HomeComponent

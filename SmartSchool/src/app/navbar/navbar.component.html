@@ -1,15 +1,17 @@
-<nav class="navbar container-fluid navbar-collapse navbar-light bg-light">
+<nav ngxNavbarDynamicExpand class="navbar container-fluid navbar-collapse navbar-light bg-light">
   <div class="container-fluid navbar-expand-lg">
     <a class="navbar-brand" routerLink="home"> Home </a>
-  
-    <button class="navbar-toggler" type="button" data-toggle="collapse" mdbCollapse  data-target="#navbarNavDropdown"
-      aria-controls="navbarNavDropdown" aria-expanded="true" aria-label="Toggle navigation">
+
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" mdbCollapse data-target="#navbarNavDropdown"
+      aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation" (click)="collapse.toggle()">
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ngx-navbar-collapse #collapse="ngxNavbarCollapse">
+      <!--div class="collapse navbar-collapse" id="navbarNavDropdown"-->
       <ul class="navbar-nav col-lg ">
-        
+
         <li class="nav-item active">
           <a routerLink="alunos" class="nav-link" routerLinkActive="active"> Alunos </a>
         </li>
@@ -28,13 +30,14 @@
             aria-haspopup="true" aria-expanded="false" style="cursor:pointer">
             Igor
           </a>
-          <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink" id="dropdown-basic" *dropdownMenu>
+          <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink" id="dropdown-basic"
+            *dropdownMenu>
             <a class="dropdown-item" routerLink="perfil">Perfil</a>
             <a class="dropdown-item" href="#">Sair</a>
           </div>
         </li>
       </ul>
-    </div>
+      <!--/div-->
+    </ngx-navbar-collapse>
   </div>
 </nav>
-

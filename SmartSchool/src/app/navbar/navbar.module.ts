@@ -4,6 +4,8 @@ import { NavbarComponent } from './navbar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { AppRoutingModule } from '../app-routing.module';
+import { NgxNavbarModule } from 'ngx-bootstrap-navbar';
+
 
 
 
@@ -16,7 +18,8 @@ import { AppRoutingModule } from '../app-routing.module';
     CommonModule,
     BrowserAnimationsModule,
     BsDropdownModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgxNavbarModule
   ],
   exports: [
     NavbarComponent

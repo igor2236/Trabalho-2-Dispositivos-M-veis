@@ -19,7 +19,7 @@ export class ProfessoresComponent implements OnInit {
   @Input() professorSelected!: Professor;
 
   protected professores = [
-    { id: 1, name: 'Carlos Carne', email: "C_CARNE@protonmail.com", dis:"Análise de Marmoreio" },
+    { id: 1, name: 'Carlos Carne', email: "C_CARNE@protonmail.org", dis:"Análise de Marmoreio" },
     { id: 2, name: 'Alison Saldanha', email: "alissdanha@gmail.com", dis:"Acendimento de Carvão" },
     { id: 3, name: 'Rafão Grelhas', email: "R_Grrl@outlook.com", dis:"Introdução ao Ponto" },
     { id: 4, name: 'Joseph Cupim', email: "jopCP@outlook.com", dis:"Cartiado com o  Açougue" },

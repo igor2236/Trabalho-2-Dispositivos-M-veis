@@ -9,36 +9,38 @@
         </div>
     </div>
 
-<form>
-    <div class="mb-3">
-        <label for="formGroupExampleInput" class="form-label">Nome</label>
-        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Nome">
-    </div>
+    <form>
+        <div class="mb-3">
+            <label for="formGroupExampleInput" class="form-label">Nome</label>
+            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Nome">
+        </div>
 
-    <div class="mb-3">
-        <label for="formGroupExampleInput" class="form-label">Código</label>
-        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Código">
-    </div>
-</form>
+        <div class="mb-3">
+            <label for="formGroupExampleInput" class="form-label">Código</label>
+            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Código">
+        </div>
+    </form>
 
 </div>
 <div *ngIf="!disciplinaSelected">
-    <app-titulo [titulo]='titulo'></app-titulo>
-    <table class="table table-striped table-hover">
-        <thead class="thead-dark">
-            <tr class="table-dark">
-                <th scope="col">ID</th>
-                <th scope="col">Nome</th>
-                <th scope="col">Código</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr *ngFor="let disciplina of disciplinas" style="cursor: pointer;"
-                (click)="disciplinaSelect(disciplina.name)">
-                <th scope="row">{{disciplina.id}}</th>
-                <td>{{disciplina.name}}</td>
-                <td>{{disciplina.code}}</td>
-            </tr>
-        </tbody>
-    </table>
+    <div class="table-responsive">
+        <app-titulo [titulo]='titulo'></app-titulo>
+        <table class="table table-striped table-hover">
+            <thead class="thead-dark">
+                <tr class="table-dark">
+                    <th scope="col">ID</th>
+                    <th scope="col">Nome</th>
+                    <th scope="col">Código</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let disciplina of disciplinas" style="cursor: pointer;"
+                    (click)="disciplinaSelect(disciplina.name)">
+                    <th scope="row">{{disciplina.id}}</th>
+                    <td>{{disciplina.name}}</td>
+                    <td>{{disciplina.code}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </div>

@@ -28,24 +28,27 @@
 
 </div>
 <div *ngIf="!professorSelected">
+
     <app-titulo [titulo]="titulo"></app-titulo>
-    <table class="table table-striped table-hover">
-        <thead class="thead-dark">
-            <tr class="table-dark">
-                <th scope="col">ID</th>
-                <th scope="col">Nome</th>
-                <th scope="col">E-mail</th>
-                <th scope="col">Disciplina</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr *ngFor="let professor of professores" style="cursor: pointer;"
-                (click)="professorSelect(professor)">
-                <th scope="row">{{professor.id}}</th>
-                <td>{{professor.name}}</td>
-                <td>{{professor.email}}</td>
-                <td>{{professor.dis}}</td>
-            </tr>
-        </tbody>
-    </table>
+    <div class="table-responsive">
+        <table class="table table-striped table-hover table-sm">
+            <thead class="thead-dark">
+                <tr class="table-dark">
+                    <th scope="col">ID</th>
+                    <th scope="col">Nome</th>
+                    <th scope="col">E-mail</th>
+                    <th scope="col">Disciplina</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let professor of professores" style="cursor: pointer;"
+                    (click)="professorSelect(professor)">
+                    <th scope="row">{{professor.id}}</th>
+                    <td>{{professor.name}}</td>
+                    <td>{{professor.email}}</td>
+                    <td>{{professor.dis}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </div>
