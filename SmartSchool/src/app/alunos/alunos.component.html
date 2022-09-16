@@ -1,4 +1,43 @@
-<app-titulo></app-titulo>
-<ul>
-    <li *ngFor="let aluno of alunos">{{aluno.id}} - {{aluno.name}}</li>
-</ul>
+<div *ngIf="alunoSelected">
+
+<div class="row">
+    <div class="col">
+        <app-titulo [titulo]="'Aluno/a:' + alunoSelected.name"></app-titulo>
+    </div>
+    <div class="col float-end text-end">
+        <button class="btn btn-warning" style="margin: 5px" (click)="return()">Voltar</button>
+    </div>
+</div>
+    
+<form>
+    <div class="mb-3">
+        <label for="formGroupExampleInput" class="form-label">Nome</label>
+        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Nome do aluno">
+    </div>
+
+    <div class="mb-3">
+        <label for="formGroupExampleInput" class="form-label">Telefone</label>
+        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Telefone">
+    </div>
+</form>
+
+</div>
+<div *ngIf="!alunoSelected">
+    <app-titulo [titulo]="titulo"></app-titulo>
+    <table class="table table-striped table-hover">
+        <thead class="thead-dark">
+            <tr class="table-dark">
+                <th scope="col">ID</th>
+                <th scope="col">Nome</th>
+                <th scope="col">Telefone</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let aluno of alunos" style="cursor: pointer;" (click)="alunoSelect(aluno)">
+                <th scope="row">{{aluno.id}}</th>
+                <td>{{aluno.name}}</td>
+                <td>{{aluno.tel}}</td> 
+            </tr>
+        </tbody>
+    </table>
+</div>

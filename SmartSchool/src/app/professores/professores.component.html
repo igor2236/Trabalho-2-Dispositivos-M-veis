@@ -1,6 +1,51 @@
-<app-titulo [titulo]='titulo'></app-titulo>
-        <ul>
-            <li *ngFor="let professor of professores; index as i" style="cursor: pointer;">{{i+1}} - {{professor.name}}</li>
-        </ul>
+<div *ngIf="professorSelected">
 
-        aqui deveria ter uma tabela ngx-bootstrap
+    <div class="row">
+        <div class="col">
+            <app-titulo [titulo]="'Professor: ' + professorSelected.name"></app-titulo>
+        </div>
+        <div class="col float-end text-end">
+            <button class="btn btn-warning" style="margin: 5px" (click)="return()">Voltar</button>
+        </div>
+    </div>
+
+<form>
+    <div class="mb-3">
+        <label for="formGroupExampleInput" class="form-label">Nome</label>
+        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Nome do professor">
+    </div>
+
+    <div class="mb-3">
+        <label for="formGroupExampleInput" class="form-label">E-mail</label>
+        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="exemplo@emailhost.com">
+    </div>
+</form>
+
+    <div class="mb-3">
+        <label for="formGroupExampleInput" class="form-label">Disciplina</label>
+        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Disciplina">
+    </div>
+
+</div>
+<div *ngIf="!professorSelected">
+    <app-titulo [titulo]="titulo"></app-titulo>
+    <table class="table table-striped table-hover">
+        <thead class="thead-dark">
+            <tr class="table-dark">
+                <th scope="col">ID</th>
+                <th scope="col">Nome</th>
+                <th scope="col">E-mail</th>
+                <th scope="col">Disciplina</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let professor of professores" style="cursor: pointer;"
+                (click)="professorSelect(professor)">
+                <th scope="row">{{professor.id}}</th>
+                <td>{{professor.name}}</td>
+                <td>{{professor.email}}</td>
+                <td>{{professor.dis}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
