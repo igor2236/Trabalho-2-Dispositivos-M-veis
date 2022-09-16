@@ -2,7 +2,7 @@ import { Component, OnInit, Input, ɵLocaleDataIndex } from '@angular/core';
 import { Professor } from '../models/Professor';
 
 export function log(target: any): void {
-  console.log("que merda é essa de typescript?!")
+  console.log("???")
 }
 
 @Component({
