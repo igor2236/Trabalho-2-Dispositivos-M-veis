@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Aluno } from '../models/Aluno';
 
 @Component({
@@ -8,8 +9,10 @@ import { Aluno } from '../models/Aluno';
 })
 export class AlunosComponent implements OnInit {
 
+  protected alunoForm: FormGroup;
   protected titulo: string = "Alunos";
   @Input() alunoSelected!: Aluno;
+  protected simpleText: string;
 
   protected alunos = [
     { id: 1, name: 'Rogerio', tel: '502924481' },
@@ -21,16 +24,36 @@ export class AlunosComponent implements OnInit {
     { id: 7, name: 'Neide', tel: '502999480' }
   ];
 
-  alunoSelect(aluno: Aluno){
-    this.alunoSelected = aluno;
-  };
-
-  return(){
-    this.alunoSelected = null;
+  constructor(private fb: FormBuilder) {
+    this.criarFormulario();
   }
-  constructor() { }
 
   ngOnInit(): void {
   }
+
+  criarFormulario() {
+    this.alunoForm = this.fb.group({
+      name: [''],
+      tel: ['']
+    });
+  }
+
+  alunoSelect(aluno: Aluno) {
+    this.alunoSelected = aluno;
+    this.alunoForm.patchValue(aluno);
+    /*
+    this.alunoForm.controls['name'].setValue('abcd');
+    this.alunoForm.controls['tel'].setValue('abcd');
+    */
+  };
+
+  alunoSubmit() {
+    console.log(this.alunoForm.value);
+  }
+
+  close() {
+    this.alunoSelected = null;
+  }
+
 
 }

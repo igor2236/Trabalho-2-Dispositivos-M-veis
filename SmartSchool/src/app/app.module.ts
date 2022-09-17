@@ -14,6 +14,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { NgxNavbarModule } from 'ngx-bootstrap-navbar';
 import { CollapseModule } from 'ngx-bootstrap/collapse';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -32,8 +33,9 @@ import { CollapseModule } from 'ngx-bootstrap/collapse';
     BsDropdownModule.forRoot(),
     BrowserAnimationsModule,
     CollapseModule,
-    NgxNavbarModule
-   
+    NgxNavbarModule,
+    FormsModule,
+    ReactiveFormsModule   
 
   ],
   providers: [],

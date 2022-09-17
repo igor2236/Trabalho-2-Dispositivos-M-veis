@@ -2,7 +2,7 @@
 
     <div class="row">
         <div class="col">
-            <app-titulo [titulo]="'Professor: ' + professorSelected.name"></app-titulo>
+            <app-titulo [titulo]="'Professor: ' + professorSelected.id"></app-titulo>
         </div>
         <div class="col float-end text-end">
             <button class="btn btn-warning" style="margin: 5px" (click)="return()">Voltar</button>
@@ -12,18 +12,18 @@
 <form>
     <div class="mb-3">
         <label for="formGroupExampleInput" class="form-label">Nome</label>
-        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Nome do professor">
+        <input type="text" class="form-control" value="{{professorSelected.name}}" id="formGroupExampleInput" placeholder="Nome do professor">
     </div>
 
     <div class="mb-3">
         <label for="formGroupExampleInput" class="form-label">E-mail</label>
-        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="exemplo@emailhost.com">
+        <input type="text" class="form-control" value="{{professorSelected.email}}" id="formGroupExampleInput" placeholder="exemplo@emailhost.com">
     </div>
 </form>
 
     <div class="mb-3">
         <label for="formGroupExampleInput" class="form-label">Disciplina</label>
-        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Disciplina">
+        <input type="text" class="form-control" value="{{professorSelected.dis}}" id="formGroupExampleInput" placeholder="Disciplina">
     </div>
 
 </div>

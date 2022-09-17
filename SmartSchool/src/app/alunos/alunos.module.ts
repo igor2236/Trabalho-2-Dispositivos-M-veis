@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AlunosComponent } from './alunos.component';
 import { TituloModule } from '../titulo/titulo.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 
 
 
@@ -11,7 +13,9 @@ import { TituloModule } from '../titulo/titulo.module';
   ],
   imports: [
     CommonModule,
-    TituloModule
+    TituloModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   exports: [
     AlunosComponent
