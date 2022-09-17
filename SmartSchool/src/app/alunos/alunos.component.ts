@@ -40,7 +40,8 @@ export class AlunosComponent implements OnInit {
 
   alunoSelect(aluno: Aluno) {
     this.alunoSelected = aluno;
-    this.alunoForm.patchValue(aluno);
+    this.alunoForm.controls['name'].setValue(aluno.name);
+    this.alunoForm.controls['tel'].setValue(aluno.tel);
     /*
     this.alunoForm.controls['name'].setValue('abcd');
     this.alunoForm.controls['tel'].setValue('abcd');
@@ -48,7 +49,9 @@ export class AlunosComponent implements OnInit {
   };
 
   alunoSubmit() {
-    console.log(this.alunoForm.value);
+    console.log(this.alunoSelected);
+    console.log('sadasdsa');
+    
   }
 
   close() {
