@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ProfessoresComponent } from './professores.component';
 import { TituloModule } from '../titulo/titulo.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -11,7 +12,9 @@ import { TituloModule } from '../titulo/titulo.module';
   ],
   imports: [
     CommonModule,
-    TituloModule
+    TituloModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   exports: [
     ProfessoresComponent

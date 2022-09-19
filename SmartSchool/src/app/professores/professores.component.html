@@ -1,54 +1,64 @@
-<div *ngIf="professorSelected">
+<div class="row">
 
-    <div class="row">
-        <div class="col">
-            <app-titulo [titulo]="'Professor: ' + professorSelected.id"></app-titulo>
+    <div [ngClass]="{'col-sm-6': professorSelected, 'col-sm-12': !professorSelected}">
+
+        <app-titulo [titulo]="titulo"></app-titulo>
+        <div class="table-responsive">
+            <table class="table table-striped table-hover table-sm">
+                <thead class="thead-dark">
+                    <tr class="table-dark">
+                        <th scope="col">ID</th>
+                        <th scope="col">Nome</th>
+                        <th scope="col">E-mail</th>
+                        <th scope="col">Disciplina</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let professor of professores" style="cursor: pointer;"
+                        (click)="professorSelect(professor)">
+                        <th scope="row">{{professor.id}}</th>
+                        <td>{{professor.name}}</td>
+                        <td>{{professor.email}}</td>
+                        <td>{{professor.dis}}</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
-        <div class="col float-end text-end">
-            <button class="btn btn-warning" style="margin: 5px" (click)="return()">Voltar</button>
+    </div>
+
+    <!--div *ngIf="professorSelected"-->
+    <div *ngIf="professorSelected" class="col-sm-6" >
+        <div class="row">
+            <div class="col">
+                <app-titulo [titulo]="'Professor: ' + professorSelected.id"></app-titulo>
+            </div>
+            <div class="col float-end text-end">
+                <button class="btn btn-outline-danger" style="margin: 5px" (click)="close()">Fechar</button>
+            </div>
         </div>
-    </div>
 
-<form>
-    <div class="mb-3">
-        <label for="formGroupExampleInput" class="form-label">Nome</label>
-        <input type="text" class="form-control" value="{{professorSelected.name}}" id="formGroupExampleInput" placeholder="Nome do professor">
-    </div>
 
-    <div class="mb-3">
-        <label for="formGroupExampleInput" class="form-label">E-mail</label>
-        <input type="text" class="form-control" value="{{professorSelected.email}}" id="formGroupExampleInput" placeholder="exemplo@emailhost.com">
-    </div>
-</form>
+        <form [formGroup]="professorForm" (submit)="professorSubmit()">
+            <div class="form-group">
+                <label for="formGroupExampleInput">Nome</label>
+                <input type="text" class="form-control" formControlName="name" ngDefaultControl>
+            </div>
 
-    <div class="mb-3">
-        <label for="formGroupExampleInput" class="form-label">Disciplina</label>
-        <input type="text" class="form-control" value="{{professorSelected.dis}}" id="formGroupExampleInput" placeholder="Disciplina">
-    </div>
+            <div class="form-group">
+                <label for="formGroupExampleInput">E-mail</label>
+                <input type="text" class="form-control" formControlName="email" id="formGroupExampleInput"
+                    placeholder="exemplo@emailhost.com">
+            </div>
 
-</div>
-<div *ngIf="!professorSelected">
+            <div class="form-group">
+                <label for="formGroupExampleInput">Disciplina</label>
+                <input type="text" class="form-control" formControlName="dis" id="formGroupExampleInput"
+                    placeholder="Disciplina">
+            </div>
 
-    <app-titulo [titulo]="titulo"></app-titulo>
-    <div class="table-responsive">
-        <table class="table table-striped table-hover table-sm">
-            <thead class="thead-dark">
-                <tr class="table-dark">
-                    <th scope="col">ID</th>
-                    <th scope="col">Nome</th>
-                    <th scope="col">E-mail</th>
-                    <th scope="col">Disciplina</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr *ngFor="let professor of professores" style="cursor: pointer;"
-                    (click)="professorSelect(professor)">
-                    <th scope="row">{{professor.id}}</th>
-                    <td>{{professor.name}}</td>
-                    <td>{{professor.email}}</td>
-                    <td>{{professor.dis}}</td>
-                </tr>
-            </tbody>
-        </table>
+            <hr>
+            <button class="btn btn-success" [disabled]="!professorForm.valid">Enviar</button>
+        </form>
     </div>
 </div>
+    <!--/div-->

@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "jYeHPW9pxedWt9bY3ItXJ0LE6B+leB3AcsAWA5R0tfMpFQTctLsLBSLqIZR+DYpQIWbHsFghZ5vyrS3f4wGw2w==",
+  "success": true,
+  "projectFilePath": "/home/igor/Desktop/treino/Angular & .NET Core/SmartSchool_WebAPI/SmartSchool_WebAPI.csproj",
+  "expectedPackageFiles": [
+    "/home/igor/.nuget/packages/microsoft.extensions.apidescription.server/3.0.0/microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "/home/igor/.nuget/packages/microsoft.openapi/1.2.3/microsoft.openapi.1.2.3.nupkg.sha512",
+    "/home/igor/.nuget/packages/swashbuckle.aspnetcore/6.2.3/swashbuckle.aspnetcore.6.2.3.nupkg.sha512",
+    "/home/igor/.nuget/packages/swashbuckle.aspnetcore.swagger/6.2.3/swashbuckle.aspnetcore.swagger.6.2.3.nupkg.sha512",
+    "/home/igor/.nuget/packages/swashbuckle.aspnetcore.swaggergen/6.2.3/swashbuckle.aspnetcore.swaggergen.6.2.3.nupkg.sha512",
+    "/home/igor/.nuget/packages/swashbuckle.aspnetcore.swaggerui/6.2.3/swashbuckle.aspnetcore.swaggerui.6.2.3.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -15,6 +15,8 @@ import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { NgxNavbarModule } from 'ngx-bootstrap-navbar';
 import { CollapseModule } from 'ngx-bootstrap/collapse';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ModalModule, BsModalService } from 'ngx-bootstrap/modal';
+
 
 @NgModule({
   declarations: [
@@ -35,7 +37,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     CollapseModule,
     NgxNavbarModule,
     FormsModule,
-    ReactiveFormsModule   
+    ReactiveFormsModule,
+    ModalModule.forRoot()
 
   ],
   providers: [],

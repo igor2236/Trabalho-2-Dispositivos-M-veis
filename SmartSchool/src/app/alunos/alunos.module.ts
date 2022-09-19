@@ -3,7 +3,8 @@ import { CommonModule } from '@angular/common';
 import { AlunosComponent } from './alunos.component';
 import { TituloModule } from '../titulo/titulo.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-
+import { ModalModule, BsModalService } from 'ngx-bootstrap/modal';
+import { ProfessoresModule } from '../professores/professores.module';
 
 
 
@@ -15,7 +16,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     CommonModule,
     TituloModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    ModalModule.forRoot(),
+    ProfessoresModule
   ],
   exports: [
     AlunosComponent
