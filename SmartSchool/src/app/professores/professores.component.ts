@@ -19,6 +19,7 @@ export class ProfessoresComponent implements OnInit {
   protected titulo: string = "Professores";
   @Input() professorSelected!: Professor;
 
+  /*
   protected professores = [
     { id: 1, name: 'Carlos Carne', email: "C_CARNE@protonmail.org", dis: "Análise de Marmoreio" },
     { id: 2, name: 'Alison Saldanha', email: "alissdanha@gmail.com", dis: "Acendimento de Carvão" },
@@ -26,6 +27,16 @@ export class ProfessoresComponent implements OnInit {
     { id: 4, name: 'Joseph Cupim', email: "jopCP@outlook.com", dis: "Cartiado com o  Açougue" },
     { id: 5, name: 'Suzano Celado', email: "SC399401@bol.com", dis: "Introdução aos Cortes" },
     { id: 6, name: 'Plinio Salgado', email: "PS300145@gmail.com", dis: "Espetificação e Análise de Fibras" }
+  ];
+  */
+
+  protected professores = [
+    { id: 1, name: 'Carlos Carne', email: "C_CARNE@protonmail.org", dis: "Disciplina 1" },
+    { id: 2, name: 'Alison Saldanha', email: "alissdanha@gmail.com", dis: "Disciplina 2" },
+    { id: 3, name: 'Rafão Grelhas', email: "R_Grrl@outlook.com", dis: "Disciplina 3" },
+    { id: 4, name: 'Joseph Cupim', email: "jopCP@outlook.com", dis: "Disciplina 4" },
+    { id: 5, name: 'Suzano Celado', email: "SC399401@bol.com", dis: "Disciplina 5" },
+    { id: 6, name: 'Plinio Salgado', email: "PS300145@gmail.com", dis: "Disciplina 6" }
   ];
 
   constructor(private fb: FormBuilder) {
